@@ -1,0 +1,53 @@
+<div class="container-fluid">    
+    <div class="row padding">
+        <div class="col-12">
+            <div class="header text-center">
+                <p>
+                    <span><img src="https://media1.giphy.com/media/h7ZuxGCxXTRMQ/200.gif?cid=2372fa1183b5e2cc20772005a38535c10b325d709cf9458e&rid=200.gif" alt="emoji"></span>
+                    <span class="head-title">GiphyForDummies</span>
+                    <span><img src="./../../../assets/images/giphyEmoji.png" alt="emoji"></span>
+                </p>
+            </div>
+        </div>        
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-0"></div>
+        <div class="col-12 col-md-6 padding">
+            <div class="trending-section">
+                <div class="row">                
+                    <div class="col-12 text-center padding">
+                        <h2>TRENDING</h2>
+                        <hr>
+                    </div>                          
+                </div>
+                <div class="scrollable">
+                    <div class="row">
+                        <div *ngFor='let url of trending.gifURL' class="col-12 col-md-6 col-xl-4 mb-4">
+                            <div class="text-center">
+                                <img src="{{url}}" alt="giphyImage">
+                            </div>
+                        </div>                                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-0"></div>        
+        <div class="col-12 col-md-6 search-section">
+            <div class="row padding search-header">                    
+                <div class="col-6">
+                    <h2><strong>SEARCH</strong></h2>
+                </div>
+                <div class="col-6 text-right">
+                    <h4><a routerLink="/gifs" routerLinkActive='activeRoute'>GIF</a> | <a routerLink="/stickers" routerLinkActive='activeRoute'>STICKER</a></h4>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <router-outlet></router-outlet>
+                </div>                    
+            </div>
+        </div>
+    </div>
+</div>

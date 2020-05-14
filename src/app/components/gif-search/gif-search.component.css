@@ -1,0 +1,19 @@
+.scrollable{
+    max-height: 30em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+::-webkit-scrollbar{
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  border: 0px;    
+}  
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 3px;
+}
